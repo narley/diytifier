@@ -28,6 +28,7 @@ dependencies:
 - wreq
 - lens
 - dotenv
+- directory
 
 library:
   source-dirs: src
