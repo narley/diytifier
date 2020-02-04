@@ -24,8 +24,8 @@ sendEmailEndpoint :: IO String
 sendEmailEndpoint = getEnv "SEND_EMAIL_ENDPOINT"
 
 currentCoursesDates :: [String]
--- currentCoursesDates = ["15/01/2020","22/04/2020"]
-currentCoursesDates = ["01/01/2020", "10/02/2020"]
+currentCoursesDates = ["15/01/2020","22/04/2020"]
+-- currentCoursesDates = ["01/01/2020", "10/02/2020"]
 
 getStartDates :: IO [String]
 getStartDates = do
