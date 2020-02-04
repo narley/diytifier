@@ -1,0 +1,55 @@
+name:                diytifier
+version:             0.1.0.0
+github:              "githubuser/diytifier"
+license:             BSD3
+author:              "Narley Brittes"
+maintainer:          "narley@brittes.co.uk"
+copyright:           "2020 Narley Brittes"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+synopsis:            Simple tool to get notifications about free DIY courses at Local University
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/diytifier#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- scalpel
+- text
+- regex-tdfa
+- regex-tdfa-text
+- wreq
+- lens
+- dotenv
+
+library:
+  source-dirs: src
+
+executables:
+  diytifier:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - diytifier
+
+tests:
+  diytifier-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - diytifier
