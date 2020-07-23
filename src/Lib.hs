@@ -52,7 +52,7 @@ hasNewCourses xs =
     True
 
 getNewCourse :: [String] -> [String]
-getNewCourse xs = currentCoursesDates \\ xs
+getNewCourse newDates = newDates \\ currentCoursesDates
 
 sendEmailNotification :: [String] -> IO ()
 sendEmailNotification dates = do
