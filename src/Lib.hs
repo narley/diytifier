@@ -46,7 +46,8 @@ getStartDates = do
 
 hasNewCourses :: [String] -> Bool
 hasNewCourses xs =
-  if (null $ currentCoursesDates \\ xs) then
+  -- if (null $ currentCoursesDates \\ xs) then
+  if (null $ xs \\ currentCoursesDates ) then
     False
   else
     True
